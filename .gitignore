@@ -1,0 +1,9 @@
+# Mac
+.DS_Store
+
+# Node / Eleventy (added in advance of tooling)
+node_modules/
+.cache/
+
+# Editor scratch
+*.swp
