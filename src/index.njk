@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Mike's Second Brain
+---
+<h1>{{ title }}</h1>
+<p class="sub">Senior Director, AI Programs · CodePath</p>
+
+<p>Eleventy scaffold verification page. Real content lands in subsequent steps.</p>
+
+<h2>Sanity check of the data pipeline</h2>
+<ul>
+  <li>Days active: {{ metrics.days_active }}</li>
+  <li>Files tracked: {{ metrics.total_files }}</li>
+  <li>Lines of context: {{ metrics.total_lines }}</li>
+</ul>
+
+<p class="note">These numbers are placeholder values from <code>src/_data/metrics.json</code>. They'll be replaced by real values written nightly by the Python analytics script.</p>

@@ -1,0 +1,14 @@
+{
+  "name": "codepath-second-brain-public",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public-facing microsite for Mike Wales' Second Brain",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf docs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
