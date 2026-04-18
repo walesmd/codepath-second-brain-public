@@ -5,13 +5,36 @@ title: Mike's Second Brain
 <h1>{{ title }}</h1>
 <p class="sub">Senior Director, AI Programs · CodePath</p>
 
-<p>Eleventy scaffold verification page. Real content lands in subsequent steps.</p>
+<section class="intro">
+  <p>A public-facing view into how I use Claude Cowork and a structured knowledge system at CodePath.</p>
+</section>
 
-<h2>Sanity check of the data pipeline</h2>
-<ul>
-  <li>Days active: {{ metrics.days_active }}</li>
-  <li>Files tracked: {{ metrics.total_files }}</li>
-  <li>Lines of context: {{ metrics.total_lines }}</li>
-</ul>
+<section class="stats">
+  <h2>Current state</h2>
+  <dl>
+    <dt>Day</dt><dd>{{ metrics.days_active }}</dd>
+    <dt>Files tracked</dt><dd>{{ metrics.total_files }}</dd>
+    <dt>Lines of context</dt><dd>{{ metrics.total_lines }}</dd>
+    <dt>Total size</dt><dd>{{ metrics.total_kb }} KB</dd>
+  </dl>
+</section>
 
-<p class="note">These numbers are placeholder values from <code>src/_data/metrics.json</code>. They'll be replaced by real values written nightly by the Python analytics script.</p>
+<section class="posts">
+  <h2>Build log</h2>
+  {% set posts = collections.post | reverse %}
+  {% if posts.length == 0 %}
+    <p class="note">No posts yet.</p>
+  {% else %}
+    <ul class="post-list">
+      {%- for post in posts -%}
+        {%- if loop.index0 < 5 %}
+        <li>
+          <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          <span class="post-date"><time datetime="{{ post.date | date('iso') }}">{{ post.date | date }}</time></span>
+          {% if post.data.summary %}<p class="post-summary">{{ post.data.summary }}</p>{% endif %}
+        </li>
+        {% endif -%}
+      {%- endfor %}
+    </ul>
+  {% endif %}
+</section>

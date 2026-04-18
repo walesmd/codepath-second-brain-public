@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<article class="post">
+  <p class="post-meta">
+    <a href="{{ '/' | url }}">← Back</a>
+    <span class="dot">·</span>
+    <time datetime="{{ date | date('iso') }}">{{ date | date }}</time>
+  </p>
+  <h1>{{ title }}</h1>
+  {% if summary %}<p class="post-summary">{{ summary }}</p>{% endif %}
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>

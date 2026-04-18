@@ -7,8 +7,31 @@ body {
   line-height: 1.6;
 }
 h1 { margin-bottom: 0.25rem; }
+h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.05em; color: #444; }
 .sub { color: #666; margin-top: 0; }
 .note { color: #888; font-size: 0.9rem; }
 .footer-note { color: #aaa; font-size: 0.8rem; margin-top: 3rem; }
-ul { padding-left: 1.25rem; }
 code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.9em; }
+
+/* Metrics */
+.stats dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.25rem 1.25rem; margin: 0; }
+.stats dt { color: #666; }
+.stats dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+/* Post list on index */
+.post-list { list-style: none; padding: 0; }
+.post-list li { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
+.post-list li:last-child { border-bottom: none; }
+.post-list a { font-weight: 600; text-decoration: none; color: #1a1a1a; }
+.post-list a:hover { text-decoration: underline; }
+.post-date { color: #888; font-size: 0.85rem; margin-left: 0.5rem; }
+.post-summary { color: #555; margin: 0.25rem 0 0 0; font-size: 0.95rem; }
+
+/* Individual post */
+.post-meta { color: #888; font-size: 0.9rem; }
+.post-meta a { color: #666; }
+.post-meta .dot { margin: 0 0.4rem; }
+.post-summary { color: #555; font-style: italic; }
+.post-body { margin-top: 2rem; }
+.post-body p { margin: 1rem 0; }
+.post-body ul { margin: 1rem 0; }
