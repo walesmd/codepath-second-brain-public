@@ -6,7 +6,7 @@ summary: A short intro to what this site is, who it's for, and what I'm trying t
 
 I start as Senior Director, AI Programs at CodePath on April 20, 2026. Two days before starting, I built the system that generated this page.
 
-That timing is deliberate. CodePath thinks AI tools are changing what knowledge workers can do, and I wanted to find that out first-hand before Day 1. So in the week before starting I've been using Claude Cowork, building out a persistent knowledge system, and learning what it actually feels like to ingest and recall information every day. I'd rather walk into my first 1:1 with Chris having used these tools than having read about them.
+That timing is deliberate. CodePath thinks AI tools are changing what knowledge workers can do, and I wanted to find that out first-hand before Day 1. So in the week before starting I've been using Claude Cowork, building out a persistent knowledge system, and learning what it actually feels like to ingest and recall information every day.
 
 This site is the public face of that practice. My private repo holds the actual notes: onboarding prep, organizational context, partnership briefs, daily reflections. The public repo holds two things only: aggregate numbers about how the system is growing, and posts like this one where I explain how I'm using it or what I'm learning.
 
