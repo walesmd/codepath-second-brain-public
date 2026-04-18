@@ -1,6 +1,6 @@
 ---
 title: Why this exists
-date: 2026-04-18
+date: 2026-04-18T13:51:12-05:00
 summary: A short intro to what this site is, who it's for, and what I'm trying to prove.
 ---
 

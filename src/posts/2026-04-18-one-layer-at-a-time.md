@@ -1,6 +1,6 @@
 ---
 title: What runs while I'm not looking
-date: 2026-04-18
+date: 2026-04-18T15:48:11-05:00
 summary: A walkthrough of the three scheduled tasks that pull my day together without me asking, plus the pipeline that rebuilds this dashboard overnight.
 ---
 
