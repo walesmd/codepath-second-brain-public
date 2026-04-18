@@ -23,7 +23,7 @@
 body {
   font-family: var(--sans);
   font-weight: 400;
-  max-width: 680px;
+  max-width: 780px;
   margin: 4rem auto;
   padding: 0 1.5rem;
   color: var(--navy);
@@ -94,26 +94,75 @@ code {
   color: var(--navy-medium);
 }
 
-/* Metrics */
-.stats dl {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 0.4rem 1.5rem;
-  margin: 0;
+/* Metrics groups (Input / Activity / Health / Narrative) */
+.metrics-group { margin-bottom: 1rem; }
+
+.group-header {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: -0.25rem 0 1.5rem 0;
+  font-style: italic;
 }
-.stats dt {
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+  margin: 0 0 0.5rem 0;
+}
+.metrics.narrative { grid-template-columns: 1fr; gap: 1.25rem; }
+
+.metric { margin: 0; }
+.metric .label {
   color: var(--ink-muted);
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  align-self: baseline;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
 }
-.stats dd {
-  margin: 0;
-  font-variant-numeric: tabular-nums;
-  font-weight: 600;
+.metric .value {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.1;
   color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.4rem;
+}
+.metric .value-text {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navy);
+}
+.metric .value .unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0;
+}
+.metric .value-text .unit {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+.metric .why {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.metric .why code {
+  font-size: 0.8em;
+  background: #f4f5fa;
+  padding: 0.05rem 0.3rem;
+}
+
+@media (max-width: 520px) {
+  .metrics { grid-template-columns: 1fr; gap: 1.25rem; }
 }
 
 /* Post list on index */

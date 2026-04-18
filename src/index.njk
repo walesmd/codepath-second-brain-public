@@ -9,14 +9,112 @@ title: Mike's Second Brain
   <p>A public-facing view into how I use Claude Cowork and a structured knowledge system at CodePath.</p>
 </section>
 
-<section class="stats">
-  <h2>Current state</h2>
-  <dl>
-    <dt>Day</dt><dd>{{ metrics.days_active }}</dd>
-    <dt>Files tracked</dt><dd>{{ metrics.total_files }}</dd>
-    <dt>Lines of context</dt><dd>{{ metrics.total_lines }}</dd>
-    <dt>Total size</dt><dd>{{ metrics.total_kb }} KB</dd>
-  </dl>
+<section class="metrics-group">
+  <h2>Input</h2>
+  <p class="group-header">Raw scale. A hoarder's notebook would score just as high, but these numbers answer the first question a new viewer asks: is there actually something here?</p>
+  <div class="metrics">
+    <div class="metric">
+      <div class="label">Day</div>
+      <div class="value">{{ metrics.input.days_active }}</div>
+      <p class="why">How long the practice has been running. Day 3 means something different from Day 300.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Files tracked</div>
+      <div class="value">{{ metrics.input.total_files }}</div>
+      <p class="why">Rough size of the knowledge surface. Not a quality signal on its own.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Lines of context</div>
+      <div class="value">{{ metrics.input.total_lines }}</div>
+      <p class="why">Volume of written thought. Easy to game, but useful as scale.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Total size</div>
+      <div class="value">{{ metrics.input.total_kb }} <span class="unit">KB</span></div>
+      <p class="why">Same shape as line count, different unit. Different viewers reach for different numbers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-group">
+  <h2>Activity</h2>
+  <p class="group-header">The difference between a practice and a one-time burst. Writing once and stopping produces the same input numbers a few weeks later; these metrics drop to zero.</p>
+  <div class="metrics">
+    <div class="metric">
+      <div class="label">Streak</div>
+      <div class="value">{{ metrics.activity.streak_days }} <span class="unit">{% if metrics.activity.streak_days == 1 %}day{% else %}days{% endif %}</span></div>
+      <p class="why">Shows whether this is a daily habit or a weekend project.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Topics touched (7d)</div>
+      <div class="value">{{ metrics.activity.topics_touched_7d }}</div>
+      <p class="why">Breadth of use. Writing in one corner every day is less interesting than working across the whole brain.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Edit:add ratio (30d)</div>
+      <div class="value">
+        {% if metrics.activity.edit_ratio_pct_30d == null %}—{% else %}{{ metrics.activity.edit_ratio_pct_30d }}<span class="unit">%</span>{% endif %}
+      </div>
+      <p class="why">Share of recent work that was editing existing notes vs. writing new ones. Separates gardening from hoarding.</p>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-group">
+  <h2>Health</h2>
+  <p class="group-header">Maintenance signals. A brain that's never pruned becomes a landfill. These numbers show whether the system is being curated.</p>
+  <div class="metrics">
+    <div class="metric">
+      <div class="label">Staleness</div>
+      <div class="value">{{ metrics.health.staleness_pct }}<span class="unit">%</span></div>
+      <p class="why">Share of files whose last commit is more than 30 days old. High staleness means accretion without curation.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Knowledge topics</div>
+      <div class="value">{{ metrics.health.knowledge_topics }}</div>
+      <p class="why">Curated topic files under <code>.claude-memory/topics/</code>. Count grows organically as the brain deepens.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Active projects</div>
+      <div class="value">{{ metrics.health.active_projects }}</div>
+      <p class="why">Intentional, in-flight work under <code>projects/</code>. Different from knowledge topics — these are things I'm doing, not things I know.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Longest thread</div>
+      <div class="value">{{ metrics.health.longest_thread_days }} <span class="unit">{% if metrics.health.longest_thread_days == 1 %}day{% else %}days{% endif %}</span></div>
+      <p class="why">
+        {% if metrics.health.longest_thread_file %}Longest continuously-updated file is <code>{{ metrics.health.longest_thread_file }}</code>. {% endif %}A long thread is evidence a single line of thought was worked for months, not just drafted once.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-group">
+  <h2>Narrative</h2>
+  <p class="group-header">What's alive right now. Static dashboards feel dead. These three fields change whenever the practice does.</p>
+  <div class="metrics narrative">
+    <div class="metric">
+      <div class="label">Most recent topic</div>
+      <div class="value value-text">
+        {% if metrics.narrative.most_recent_topic %}<code>{{ metrics.narrative.most_recent_topic }}</code>{% else %}—{% endif %}
+      </div>
+      <p class="why">Top-level path from the latest commit. Gives a sense of what's on my mind without exposing contents.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Last commit</div>
+      <div class="value value-text">
+        {% if metrics.narrative.last_commit_iso %}<time datetime="{{ metrics.narrative.last_commit_iso }}">{{ metrics.narrative.last_commit_iso | date }}</time>{% else %}—{% endif %}
+      </div>
+      <p class="why">Lag indicator. If this is days stale, something's wrong.</p>
+    </div>
+    <div class="metric">
+      <div class="label">Latest post</div>
+      <div class="value value-text">
+        {% if metrics.narrative.latest_post_title %}{{ metrics.narrative.latest_post_title }}{% if metrics.narrative.latest_post_date %} <span class="unit">· {{ metrics.narrative.latest_post_date }}</span>{% endif %}{% else %}—{% endif %}
+      </div>
+      <p class="why">Connects the private practice to the public output.</p>
+    </div>
+  </div>
 </section>
 
 <section class="posts">

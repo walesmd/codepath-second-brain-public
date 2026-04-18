@@ -1,7 +1,33 @@
 {
-  "generated_at": "2026-04-18T18:35:21Z",
+  "generated_at": "2026-04-18T19:39:46Z",
   "days_active": 3,
-  "total_files": 59,
-  "total_lines": 7785,
-  "total_kb": 581.5
+  "total_files": 60,
+  "total_lines": 7888,
+  "total_kb": 588.9,
+  "input": {
+    "days_active": 3,
+    "total_files": 60,
+    "total_lines": 7888,
+    "total_kb": 588.9
+  },
+  "activity": {
+    "streak_days": 3,
+    "topics_touched_7d": 27,
+    "edit_ratio_pct_30d": 0.0,
+    "modified_lines_30d": 0,
+    "added_lines_30d": 8274
+  },
+  "health": {
+    "staleness_pct": 0.0,
+    "knowledge_topics": 4,
+    "active_projects": 1,
+    "longest_thread_days": 1,
+    "longest_thread_file": "CLAUDE.md"
+  },
+  "narrative": {
+    "most_recent_topic": ".claude-memory",
+    "last_commit_iso": "2026-04-18T14:11:21-05:00",
+    "latest_post_title": "Why this exists",
+    "latest_post_date": "2026-04-18"
+  }
 }
