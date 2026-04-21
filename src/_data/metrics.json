@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-21T12:41:07Z",
+  "generated_at": "2026-04-21T16:43:45Z",
   "days_active": 6,
-  "total_files": 67,
-  "total_lines": 8807,
-  "total_kb": 642.5,
+  "total_files": 68,
+  "total_lines": 8967,
+  "total_kb": 652.3,
   "input": {
     "days_active": 6,
-    "total_files": 67,
-    "total_lines": 8807,
-    "total_kb": 642.5
+    "total_files": 68,
+    "total_lines": 8967,
+    "total_kb": 652.3
   },
   "activity": {
     "streak_days": 1,
@@ -27,7 +27,7 @@
   "narrative": {
     "most_recent_topic": ".claude-memory",
     "last_commit_iso": "2026-04-21T07:38:18-05:00",
-    "latest_post_title": "What runs while I'm not looking",
-    "latest_post_date": "2026-04-18"
+    "latest_post_title": "What Day 1 actually looks like with a Second Brain",
+    "latest_post_date": "2026-04-21"
   }
 }
