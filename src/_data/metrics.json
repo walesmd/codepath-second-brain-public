@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-04-18T19:39:46Z",
-  "days_active": 3,
-  "total_files": 60,
-  "total_lines": 7888,
-  "total_kb": 588.9,
+  "generated_at": "2026-04-21T12:41:07Z",
+  "days_active": 6,
+  "total_files": 67,
+  "total_lines": 8807,
+  "total_kb": 642.5,
   "input": {
-    "days_active": 3,
-    "total_files": 60,
-    "total_lines": 7888,
-    "total_kb": 588.9
+    "days_active": 6,
+    "total_files": 67,
+    "total_lines": 8807,
+    "total_kb": 642.5
   },
   "activity": {
-    "streak_days": 3,
-    "topics_touched_7d": 27,
+    "streak_days": 1,
+    "topics_touched_7d": 28,
     "edit_ratio_pct_30d": 0.0,
     "modified_lines_30d": 0,
-    "added_lines_30d": 8274
+    "added_lines_30d": 9713
   },
   "health": {
     "staleness_pct": 0.0,
-    "knowledge_topics": 4,
-    "active_projects": 1,
-    "longest_thread_days": 1,
-    "longest_thread_file": "CLAUDE.md"
+    "knowledge_topics": 7,
+    "active_projects": 2,
+    "longest_thread_days": 4,
+    "longest_thread_file": ".claude-memory/memories.md"
   },
   "narrative": {
     "most_recent_topic": ".claude-memory",
-    "last_commit_iso": "2026-04-18T14:11:21-05:00",
+    "last_commit_iso": "2026-04-21T07:38:18-05:00",
     "latest_post_title": "What runs while I'm not looking",
     "latest_post_date": "2026-04-18"
   }
