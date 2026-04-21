@@ -6,5 +6,4 @@ A public-facing view into how I use Claude Cowork and a structured knowledge sys
 
 The site is regenerated each morning from a private source repo. The contents here are aggregate metrics and curated posts — never raw notes.
 
-— Mike Wales
-- Sr. Director, AI Programs (CodePath.org)
+— Mike Wales, Sr. Director, AI Programs @CodePath.org
