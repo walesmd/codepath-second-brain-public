@@ -1,7 +1,17 @@
 module.exports = function(eleventyConfig) {
   // Static assets passed through unchanged
   eleventyConfig.addPassthroughCopy("src/style.css");
+  eleventyConfig.addPassthroughCopy("src/gate.js");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
+
+  // Relative URL filter: resolves a root-relative path to a path relative to
+  // the current page, so assets load correctly from both file:// and https://.
+  // Usage: {{ 'style.css' | relative(page.url) }}
+  eleventyConfig.addFilter("relative", (assetPath, pageUrl) => {
+    const depth = (pageUrl.match(/\//g) || []).length - 1;
+    const prefix = "../".repeat(depth);
+    return prefix + assetPath.replace(/^\//, "");
+  });
 
   // Date filter: {{ date | date }} -> "April 18, 2026"
   //               {{ date | date("iso") }} -> "2026-04-18"

@@ -7,9 +7,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap">
-  <link rel="stylesheet" href="/codepath-second-brain-public/style.css">
+  <link rel="stylesheet" href="../../style.css">
 </head>
-<body>
+<body class="gate-active">
+
+  <div id="gate-overlay" role="dialog" aria-modal="true" aria-labelledby="gate-prompt">
+    <div class="gate-box">
+      <div class="gate-logo">Mike's Second Brain</div>
+      <div class="gate-sub">Senior Director, AI Programs · CodePath</div>
+      <p id="gate-prompt" class="gate-prompt">This dashboard is for CodePath employees only. Enter the password:</p>
+      <input id="gate-input" type="password" autocomplete="current-password" placeholder="Password" />
+      <button id="gate-btn" type="button">Continue</button>
+      <div id="gate-error" aria-live="polite"></div>
+    </div>
+  </div>
+
   <main>
     <article class="post">
   <p class="post-meta">
@@ -57,5 +69,8 @@
   <footer>
     <p class="footer-note">Generated 2026-04-21T12:41:07Z</p>
   </footer>
+
+  <script src="../../gate.js"></script>
+
 </body>
 </html>

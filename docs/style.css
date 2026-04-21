@@ -202,3 +202,82 @@ code {
 .post-body ul { margin: 1.1rem 0; padding-left: 1.25rem; }
 .post-body li { margin: 0.4rem 0; }
 .post-body a { border-bottom: 1px solid var(--periwinkle); }
+
+/* Password gate */
+body.gate-active { overflow: hidden; }
+
+#gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+}
+#gate-overlay.hidden { display: none; }
+
+.gate-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+.gate-logo {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+.gate-sub {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--green);
+  margin-bottom: 2rem;
+}
+.gate-prompt {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+#gate-input {
+  width: 100%;
+  padding: 0.65rem 0.875rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  border: 1.5px solid var(--rule);
+  border-radius: 6px;
+  outline: none;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  transition: border-color 0.15s;
+}
+#gate-input:focus { border-color: var(--periwinkle); }
+#gate-input.error { border-color: #e05252; }
+#gate-btn {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: var(--periwinkle);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+#gate-btn:hover { background: #3a47e0; }
+#gate-error {
+  color: #e05252;
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  min-height: 1.1rem;
+  font-family: var(--mono);
+}
