@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-24T14:52:56Z",
+  "generated_at": "2026-04-24T14:57:12Z",
   "days_active": 9,
-  "total_files": 102,
-  "total_lines": 11913,
-  "total_kb": 884.4,
+  "total_files": 103,
+  "total_lines": 12068,
+  "total_kb": 896.7,
   "input": {
     "days_active": 9,
-    "total_files": 102,
-    "total_lines": 11913,
-    "total_kb": 884.4
+    "total_files": 103,
+    "total_lines": 12068,
+    "total_kb": 896.7
   },
   "activity": {
     "streak_days": 1,
@@ -27,7 +27,7 @@
   "narrative": {
     "most_recent_topic": ".obsidian",
     "last_commit_iso": "2026-04-24T09:49:29-05:00",
-    "latest_post_title": "Before you ship AI tools to your team, learn how your team actually works",
-    "latest_post_date": "2026-04-23"
+    "latest_post_title": "What Day 1 actually looks like with a Second Brain",
+    "latest_post_date": "2026-04-21"
   }
 }
