@@ -7,7 +7,9 @@ module.exports = function(eleventyConfig) {
   // Relative URL filter: resolves a root-relative path to a path relative to
   // the current page, so assets load correctly from both file:// and https://.
   // Usage: {{ 'style.css' | relative(page.url) }}
+  // Guard against non-string pageUrl (e.g. false when permalink: false is set on drafts).
   eleventyConfig.addFilter("relative", (assetPath, pageUrl) => {
+    if (!pageUrl || typeof pageUrl !== "string") return assetPath.replace(/^\//, "");
     const depth = (pageUrl.match(/\//g) || []).length - 1;
     const prefix = "../".repeat(depth);
     return prefix + assetPath.replace(/^\//, "");
@@ -21,6 +23,12 @@ module.exports = function(eleventyConfig) {
     return d.toLocaleDateString("en-US", {
       year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
     });
+  });
+
+  // Published posts only — excludes any post with draft: true in frontmatter.
+  // Use collections.livePosts anywhere you want to list posts publicly.
+  eleventyConfig.addCollection("livePosts", function(collectionApi) {
+    return collectionApi.getFilteredByTag("post").filter(post => !post.data.draft);
   });
 
   return {
