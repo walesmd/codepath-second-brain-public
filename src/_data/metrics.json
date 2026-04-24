@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-04-24T14:57:12Z",
+  "generated_at": "2026-04-24T16:42:33Z",
   "days_active": 9,
   "total_files": 103,
-  "total_lines": 12068,
-  "total_kb": 896.7,
+  "total_lines": 12106,
+  "total_kb": 899.2,
   "input": {
     "days_active": 9,
     "total_files": 103,
-    "total_lines": 12068,
-    "total_kb": 896.7
+    "total_lines": 12106,
+    "total_kb": 899.2
   },
   "activity": {
-    "streak_days": 1,
+    "streak_days": 5,
     "topics_touched_7d": 6,
     "edit_ratio_pct_30d": 8.2,
-    "modified_lines_30d": 1314,
-    "added_lines_30d": 14621
+    "modified_lines_30d": 1321,
+    "added_lines_30d": 14776
   },
   "health": {
     "staleness_pct": 0.0,
@@ -26,7 +26,7 @@
   },
   "narrative": {
     "most_recent_topic": ".obsidian",
-    "last_commit_iso": "2026-04-24T09:49:29-05:00",
+    "last_commit_iso": "2026-04-24T11:41:47-05:00",
     "latest_post_title": "What Day 1 actually looks like with a Second Brain",
     "latest_post_date": "2026-04-21"
   }
