@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-04-28T13:00:39Z",
-  "days_active": 13,
-  "total_files": 118,
-  "total_lines": 14772,
-  "total_kb": 1089.3,
+  "generated_at": "2026-04-29T21:16:28Z",
+  "days_active": 14,
+  "total_files": 144,
+  "total_lines": 19426,
+  "total_kb": 1400.8,
   "input": {
-    "days_active": 13,
-    "total_files": 118,
-    "total_lines": 14772,
-    "total_kb": 1089.3
+    "days_active": 14,
+    "total_files": 144,
+    "total_lines": 19426,
+    "total_kb": 1400.8
   },
   "activity": {
-    "streak_days": 2,
-    "topics_touched_7d": 6,
-    "edit_ratio_pct_30d": 11.8,
-    "modified_lines_30d": 2258,
-    "added_lines_30d": 16818
+    "streak_days": 3,
+    "topics_touched_7d": 8,
+    "edit_ratio_pct_30d": 16.9,
+    "modified_lines_30d": 4035,
+    "added_lines_30d": 19838
   },
   "health": {
     "staleness_pct": 0.0,
     "knowledge_topics": 10,
     "active_projects": 5,
-    "longest_thread_days": 11,
+    "longest_thread_days": 12,
     "longest_thread_file": ".claude-memory/memories.md"
   },
   "narrative": {
     "most_recent_topic": ".claude-memory",
-    "last_commit_iso": "2026-04-28T06:00:35-07:00",
+    "last_commit_iso": "2026-04-29T14:16:25-07:00",
     "latest_post_title": "What Day 1 actually looks like with a Second Brain",
     "latest_post_date": "2026-04-21"
   }
