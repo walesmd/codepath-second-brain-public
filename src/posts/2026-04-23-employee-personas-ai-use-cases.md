@@ -1,7 +1,6 @@
 ---
 title: Before you ship AI tools to your team, learn how your team actually works
 date: 2026-04-23
-draft: true
 summary: How we used calendar data to map five work patterns across 22 CodePath employees — and what 12 concrete AI use cases came out the other side.
 ---
 
