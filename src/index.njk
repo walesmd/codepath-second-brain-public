@@ -91,7 +91,7 @@ title: Mike's Second Brain
 
 <section class="metrics-group">
   <h2>Narrative</h2>
-  <p class="group-header">What's alive right now. Static dashboards feel dead. These three fields change whenever the practice does.</p>
+  <p class="group-header">What's alive right now. Static dashboards feel dead. These fields change whenever the practice does.</p>
   <div class="metrics narrative">
     <div class="metric">
       <div class="label">Most recent topic</div>
@@ -106,13 +106,6 @@ title: Mike's Second Brain
         {% if metrics.narrative.last_commit_iso %}<time datetime="{{ metrics.narrative.last_commit_iso }}">{{ metrics.narrative.last_commit_iso | date }}</time>{% else %}—{% endif %}
       </div>
       <p class="why">Lag indicator. If this is days stale, something's wrong.</p>
-    </div>
-    <div class="metric">
-      <div class="label">Latest post</div>
-      <div class="value value-text">
-        {% if metrics.narrative.latest_post_title %}{{ metrics.narrative.latest_post_title }}{% if metrics.narrative.latest_post_date %} <span class="unit">· {{ metrics.narrative.latest_post_date }}</span>{% endif %}{% else %}—{% endif %}
-      </div>
-      <p class="why">Connects the private practice to the public output.</p>
     </div>
   </div>
 </section>
