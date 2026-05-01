@@ -1,26 +1,26 @@
 ---
 title: Before you ship AI tools to your team, learn how your team actually works
 date: 2026-04-23
-summary: How we used calendar data to map five work patterns across 22 CodePath employees — and what 12 concrete AI use cases came out the other side.
+summary: How I used calendar data to map five work patterns across 22 CodePath employees — and what 12 concrete AI use cases came out the other side.
 ---
 
 Most AI rollouts at organizations follow a familiar pattern: pick a tool, write a usage policy, host a demo, send a Slack message. Some people start using it. Most don't. The org declares a win because seats were provisioned, and moves on.
 
-We wanted to try something different.
+I wanted to try something different.
 
-Before building anything for the Second Brain pilot, we asked a more basic question: how do our colleagues actually spend their time? Not at the job-title level — "Program Manager does program things" — but at the calendar and workflow level. What meetings do they sit in, how often, with whom? What rituals do they repeat every week? Where does information pile up and then get manually moved somewhere else?
+Before building anything for the Second Brain pilot, I asked a more basic question: how do my colleagues actually spend their time? Not at the job-title level — "Program Manager does program things" — but at the calendar and workflow level. What meetings do they sit in, how often, with whom? What rituals do they repeat every week? Where does information pile up and then get manually moved somewhere else?
 
-The idea was to let the real work tell us where AI could help, rather than guessing.
+The idea was to let the real work tell me where AI could help, rather than guessing.
 
-## What we actually did
+## What I actually did
 
-We ran an 8-week calendar analysis across 22 CodePath employees, spanning every major team: product, engineering, programs, partnerships, people, finance, and ops. We cross-referenced calendar data against Notion — role pages, org chart, team homepages — to confirm who was doing what. The goal wasn't to monitor anyone; it was to surface the work patterns underneath the job titles.
+I ran an 8-week calendar analysis across 22 CodePath employees, spanning every major team: product, engineering, programs, partnerships, people, finance, and ops. I cross-referenced calendar data against Notion — role pages, org chart, team homepages — to confirm who was doing what. The goal wasn't to monitor anyone; it was to surface the work patterns underneath the job titles.
 
 What came back wasn't 22 unique profiles. It was five.
 
 ## Five shapes of work
 
-When you look past the domains and the org chart, almost everyone at CodePath fits one of five work patterns. We call them personas — types of work, not portraits of individuals. Each covers three to six people whose daily shapes look remarkably similar even though their actual jobs are quite different.
+When you look past the domains and the org chart, almost everyone at CodePath fits one of five work patterns. I call them personas — types of work, not portraits of individuals. Each covers three to six people whose daily shapes look remarkably similar even though their actual jobs are quite different.
 
 **The Strategy Coordinator** runs multiple parallel workstreams across external stakeholders, leadership, and hiring. Their calendar mixes a dense executive rhythm (weekly syncs, officer reviews, 1:1s with directs) with a large one-off layer driven by funder touchpoints, board preparation, and hiring panels. More than 60% of their meetings, in some cases over 80%, are non-recurring. The defining cognitive load: "where did we leave off?" across a dozen simultaneous threads.
 
@@ -32,7 +32,7 @@ When you look past the domains and the org chart, almost everyone at CodePath fi
 
 **The Systems Steward** produces structured artifacts on cadence from data scattered across source systems: KPI snapshots after leadership meetings, funder budget reports reshaped per foundation, SaaS renewal audits, payroll reconciliations. Their meeting load is relatively light, but their artifact load is high. One person's calendar literally shows an event titled "Snapshot KPIs after leadership meeting" — eight times in eight weeks. Same ritual, same manual process, every week.
 
-## What those patterns tell us
+## What those patterns tell me
 
 A few things jumped out.
 
@@ -44,7 +44,7 @@ Third, the tools aren't the gap. Almost everyone in the pilot uses Google Calend
 
 ## Twelve use cases that fall out of this
 
-From the five personas, we built 12 concrete use cases. Each has a specific trigger, input, processing logic, output, and — importantly — an "existing slot it fits into." We didn't design hypothetical workflows; we looked for places where AI output could land inside something people already do.
+From the five personas, I built 12 concrete use cases. Each has a specific trigger, input, processing logic, output, and — importantly — an "existing slot it fits into." I didn't design hypothetical workflows; I looked for places where AI output could land inside something people already do.
 
 Five of the twelve apply across most or all personas:
 
@@ -54,14 +54,18 @@ The remaining seven are persona-specific: a hiring loop decision synthesizer for
 
 ## Why this matters for the pilot
 
-There's a reasonable version of this project where we skip this step entirely. Someone demos Claude, we share a usage guide, we call it AI enablement. Plenty of organizations stop there.
+There's a reasonable version of this project where I skip this step entirely — host a demo, post a usage guide, call it AI enablement. Plenty of organizations stop there.
 
 The problem with that version is that AI assistance is only useful when it fits the work, not just the job title. A Program Conductor and a Systems Steward might sit in the same Claude training session, come away with the same tool, and have completely different experiences — not because one is more motivated or technically savvy, but because their underlying work shapes and pain points are different. Generic tools don't solve specific problems.
 
-What the persona work gives us is a way to build the Second Brain pilot against real use patterns rather than hypothetical ones. We know which use cases fire multiple times daily versus weekly. We know which connectors need to be live before certain use cases make sense. We know that feasibility (writing back into Greenhouse or HubSpot) is the dimension most likely to determine whether the high-value use cases are actually deliverable in the near term.
+What the persona work gives me is a way to build the Second Brain pilot against real use patterns rather than hypothetical ones. I know which use cases fire multiple times daily versus weekly. I know which connectors need to be live before certain use cases make sense. I know that feasibility (writing back into Greenhouse or HubSpot) is the dimension most likely to determine whether the high-value use cases are actually deliverable in the near term.
 
 That's not a typical starting point for an AI rollout. It's a more useful one.
 
+Curiosity compounds,
+
+— Mike
+
 ---
 
-*This post is part of the internal documentation series for the CodePath Second Brain pilot. Questions or reactions? Find us in #tools-talk.*
+*This post is part of the internal documentation series for the CodePath Second Brain pilot. Questions or reactions? Find me in #tools-talk.*

@@ -4,7 +4,7 @@ date: 2026-04-18T15:48:11-05:00
 summary: A walkthrough of the three scheduled tasks that pull my day together without me asking, plus the pipeline that rebuilds this dashboard overnight.
 ---
 
-The first post on this site probably made it sound like I built a Second Brain from scratch. I didn't. The scaffolding came from Nathan Esquenazi's Cowork starter pack: the memory system, the async-messaging pattern (`claude-messages/`), the scheduled-task architecture, and the 20-plus CodePath org knowledge files I lean on every day. That base was already compounding long before I added anything.
+The scaffolding came from Nathan Esquenazi's Cowork starter pack: the memory system, the async-messaging pattern (`claude-messages/`), the scheduled-task architecture, and the 20-plus CodePath org knowledge files I lean on every day. That base was already compounding long before I added anything.
 
 What I added on top is smaller than it looks. Three scheduled tasks run without me asking. Each one taps into the connectors I've given Cowork (Gmail, Google Calendar, Slack, Notion, HubSpot, Granola) and writes a markdown file I read later. The tasks are the point of this whole exercise. The public dashboard further down is the side project.
 
@@ -59,5 +59,7 @@ The three scheduled tasks took maybe two hours of prompt iteration to get the ou
 Months of scaffolding, conservatively. I didn't design the memory system. I didn't invent the async-messaging channel. I didn't figure out how scheduled tasks should be structured inside Cowork. All of that is in Nathan's starter pack. What I did was plug in my connectors, write three prompts for the scheduled tasks, add two small organizing files, and bolt a public dashboard onto the side of it.
 
 If you're at CodePath and you want to do something similar, the honest advice is: start with Nathan's starter pack. Wire up your own connectors. Write the first scheduled task, even a rough one. See what lands in the file the next morning. That's when it clicks and continue to iterate.
+
+Curiosity compounds,
 
 — Mike
