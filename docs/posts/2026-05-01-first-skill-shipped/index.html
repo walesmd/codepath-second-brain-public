@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From persona to first skill shipped</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="gate-active">
+
+  <div id="gate-overlay" role="dialog" aria-modal="true" aria-labelledby="gate-prompt">
+    <div class="gate-box">
+      <div class="gate-logo">Mike's Second Brain</div>
+      <div class="gate-sub">Senior Director, AI Programs · CodePath</div>
+      <p id="gate-prompt" class="gate-prompt">This dashboard is for CodePath employees only. Enter the password:</p>
+      <input id="gate-input" type="password" autocomplete="current-password" placeholder="Password" />
+      <button id="gate-btn" type="button">Continue</button>
+      <div id="gate-error" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <main>
+    <article class="post">
+  <p class="post-meta">
+    <a href="/codepath-second-brain-public/">← Back</a>
+    <span class="dot">·</span>
+    <time datetime="2026-05-01">May 1, 2026</time>
+  </p>
+  <h1>From persona to first skill shipped</h1>
+  <p class="post-summary">Eight days ago I claimed the persona work would let me build AI for real work patterns instead of guessing. Here&#39;s the first thing I shipped, what it does, and where it almost didn&#39;t work.</p>
+  <div class="post-body">
+    <p>Eight days ago I posted about running an 8-week calendar analysis across 22 colleagues to find five recurring shapes of work, and I closed with a claim: this would let me build the Second Brain pilot against real use patterns rather than hypothetical ones.</p>
+<p>That's the kind of thing easy to write and hard to actually do. So here's the first one.</p>
+<h2>Why scheduling</h2>
+<p>Of the twelve use cases I pulled out of the persona analysis, calendar scheduling wasn't the most ambitious. It was the most cross-cutting. Every one of the five personas had it. The Strategy Coordinator juggling parallel hiring loops. The Partnership Operator coordinating across 10+ external relationships. The Program Conductor with 30+ named 1:1s. The People Operator running a constant new-hire intake. The Systems Steward booking the recurring snapshot review. Different jobs, same friction.</p>
+<p>It's also the kind of friction that's invisible until you measure it. A 30-minute meeting between two busy people takes maybe 4-7 minutes to actually book — checking availability, finding overlap, double-checking time zones, sending the invite, attaching a Zoom link, writing a one-line agenda. Multiply that by a dozen meetings a week and you're bleeding an hour of context-switched, no-flow time. None of which shows up in a calendar audit.</p>
+<p>So this seemed like the right place to start: high frequency, low risk, narrow enough to actually finish, and present in everyone's week.</p>
+<h2>What the skill actually does</h2>
+<p>It takes a natural-language request like <em>&quot;Schedule a 30-min 1:1 with Mitchell this week&quot;</em> and walks through the parts that humans do badly: resolves the attendee from a name, reads both calendars, computes the intersection of free time inside working hours, scores candidate slots, picks one that respects the day-of-week shape of the user's existing meetings, and creates the event with a Zoom link attached.</p>
+<p>The boring parts are where it earns its keep. Time-zone math is the single biggest source of scheduling errors, and the skill has a dedicated reference document for it because I kept getting it wrong by hand. Working-hours detection reads the user's actual calendar pattern instead of trusting a static 9-5 default. Attendee resolution handles the case where you say &quot;Mitchell&quot; and there are two of them in the org.</p>
+<p>The piece I'm most happy with is the fallback ladder. Real scheduling rarely produces a clean answer. Two people don't have an hour together this week. Three of them do, but only at 7am Eastern. The skill doesn't just shrug and say &quot;no slot found.&quot; It walks through four escalation paths in order: is there a similar meeting already on the calendar that the topic could fold into; is there a conflict on a candidate slot that looks safely reschedulable; should we extend the window by a few days; could the meeting compress to 25 minutes to fit. The user picks. That's where the skill starts to feel less like automation and more like a coordinator who's done this before.</p>
+<h2>The thing I deliberately didn't do</h2>
+<p>I didn't package it as a plugin yet.</p>
+<p>Cowork supports <code>.skill</code> files — single-file bundles you can drop into the Customize panel and share with a teammate. That's the obvious distribution path, and I'll get there. But I've watched myself rewrite this skill maybe a dozen times in two weeks, and almost every revision came from actually using it. The fallback ladder didn't exist in version one. The &quot;anchor now before searching&quot; rule landed the day I asked it to find time today and it cheerfully proposed 11am — three hours in the past. The urgency-detection logic showed up after I noticed it was picking mid-week slots when I'd said &quot;ASAP.&quot;</p>
+<p>Packaging too early would have frozen all of those mistakes in a distributable artifact. Iterating before packaging means the source of truth lives in one place — <code>.claude/skills/calendar-scheduling/</code> — until I've used it enough to know what's stable versus still drifting. The skill bundle is a publishing step, not a development environment.</p>
+<h2>Production use</h2>
+<p>Two real users this week, only one of them me.</p>
+<p>Quinton rebooked our 1:1 through it on Friday. The skill handled the time-zone gap (he's in PT, I'm in CT), found a slot that respected his back-to-back stretch on Monday afternoon, and dropped the invite on his calendar. Mitchell took a slot the same day as the test subject for a separate thread. Two people, two clean bookings, zero rework.</p>
+<p>That sounds small. It's the first time I've shipped something from this system that someone other than me actually depends on, and the difference between &quot;I built a thing&quot; and &quot;two people used it without asking how it worked&quot; is the entire point.</p>
+<h2>What fell down</h2>
+<p>The first version got time zones wrong in a way I'm still slightly embarrassed about. The Google Calendar API returns event times with the offset baked into the dateTime field, and I had the skill double-converting from the separate timeZone metadata field. Result: every slot was wrong by an hour, which is exactly the kind of bug that erodes trust the moment a user notices. I caught it in testing. The fix is a single line of code and a memory entry telling future-me to read the offset literally.</p>
+<p>There's also a class of requests the skill explicitly doesn't handle. Scheduling on behalf of someone else (executive-assistant style) is out of scope. So is one-sided focus-time blocking. Both showed up in the persona work as real patterns, and both will probably need their own skill rather than getting bolted onto this one. Narrow tools that do one thing well beat sprawling ones that do many things adequately.</p>
+<h2>What's next</h2>
+<p>Internally, this is teed up to be the first skill that goes organization-wide through the Second Brain pilot. There's another skill I've been iterating on that was the original first-deploy candidate; I have some reservations about its architecture I'm waiting on feedback before resolving. Calendar scheduling has now passed two real users without incident, which makes it the better precedent.</p>
+<p>Next out of the persona analysis: the pre-meeting context pack — the one that fires 30 minutes before any multi-attendee meeting and pulls the most relevant prior interactions into a brief that sits inside the calendar event. That one's narrower than it sounds and will probably be the next post.</p>
+<p>Curiosity compounds,</p>
+<p>— Mike</p>
+<hr>
+<p><em>This post is part of the internal documentation series for the CodePath Second Brain pilot. Questions or reactions? Find me in #tools-talk.</em></p>
+
+  </div>
+</article>
+
+  </main>
+  <footer>
+    <p class="footer-note">Generated 2026-05-02T04:45:12Z</p>
+  </footer>
+
+  <script src="../../gate.js"></script>
+
+</body>
+</html>
