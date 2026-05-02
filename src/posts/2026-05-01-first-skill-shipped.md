@@ -1,7 +1,6 @@
 ---
 title: From persona to first skill shipped
 date: 2026-05-01
-draft: true
 summary: Eight days ago I claimed the persona work would let me build AI for real work patterns instead of guessing. Here's the first thing I shipped, what it does, and where it almost didn't work.
 ---
 
