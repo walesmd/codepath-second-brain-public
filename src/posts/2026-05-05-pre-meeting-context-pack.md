@@ -1,7 +1,6 @@
 ---
 title: What I read before each meeting now
 date: 2026-05-05
-draft: true
 summary: Four days ago I closed a post by saying the pre-meeting context pack was probably the next thing I'd ship. It's running. Here's what it does, why it's structured as ambient automation rather than an on-demand skill, and where it still falls down.
 ---
 
@@ -11,7 +10,7 @@ Here's what it does and what I learned building the second one.
 
 ## The shape of the gap
 
-I already had two pieces of meeting infrastructure. The morning prep skill assembles a brief at 7:34 AM that walks through my day. The Granola ingest at 6 PM pulls every transcript from meetings that already happened. Both work well. But there was a window in the middle that nothing covered: the 30 minutes before a meeting starts, when I want to know what doc Chris attached to the invite and whether I've already read it.
+I already had two pieces of meeting infrastructure. The morning prep skill assembles a brief at 7:34 AM that walks through my day. The Granola ingest at 6 PM pulls every transcript from meetings that already happened. Both work well. But there was a window in the middle that nothing covered: the 30 minutes before a meeting starts, when I want to know what doc someone attached to the invite and whether I've already read it.
 
 That sounds small. It is small. But the cost of not knowing is that I either (a) walk in cold, which feels worse than it sounds when the doc was attached three days ago and I missed it, or (b) spend five minutes during the meeting clicking through links to catch up while the conversation moves past me. Neither scales when the calendar is dense.
 
@@ -76,12 +75,6 @@ Two things, both still open.
 First, large Google Docs come back as a saved file path instead of inline content because the response exceeds the connector's token budget. The fallback is `head -c 8000` against the saved path, which captures the opening 8K characters of the doc. That's almost always enough for a pre-read summary because docs front-load their context. But it's a hack, and on the day I get a doc whose useful content lives below the fold, the summary will be wrong in a way I won't notice.
 
 Second, the Zoom-hosted agenda surface is genuinely useful and the skill ignores it. Multiple of my recurring 1:1s use Zoom's built-in agenda feature instead of attaching a Google Doc, and I've now seen three meetings this week where the pre-reads file is empty even though there was an agenda — it just lived inside the Zoom invite UI. Either I add a Zoom connector path or I lean on the Google Doc convention. I haven't decided.
-
-## What's next
-
-There's a third skill from the persona analysis I want next: the post-meeting closeout. Granola already captures the transcript. What I don't have is a structured pull-out of action items, decisions, and "things I said I'd send by Friday" that lands in the right surface (the action-items file, the relevant project tracker, a draft Slack reply for things that need a response). That's three of the five personas' biggest source of dropped balls, and right now the closest thing I have is me skimming Granola notes manually.
-
-That one's bigger than the first two and I want to scope it carefully before claiming it. Probably the next post.
 
 Curiosity compounds,
 
