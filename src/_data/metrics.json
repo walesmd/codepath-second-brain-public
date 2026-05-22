@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-22T16:08:44Z",
+  "generated_at": "2026-05-22T19:01:27Z",
   "days_active": 37,
-  "total_files": 1072,
-  "total_lines": 91561,
-  "total_kb": 6740.1,
+  "total_files": 1281,
+  "total_lines": 105378,
+  "total_kb": 7587.1,
   "input": {
     "days_active": 37,
-    "total_files": 1072,
-    "total_lines": 91561,
-    "total_kb": 6740.1
+    "total_files": 1281,
+    "total_lines": 105378,
+    "total_kb": 7587.1
   },
   "activity": {
     "streak_days": 3,
     "topics_touched_7d": 8,
-    "edit_ratio_pct_30d": 10.7,
-    "modified_lines_30d": 11160,
-    "added_lines_30d": 92972
+    "edit_ratio_pct_30d": 9.2,
+    "modified_lines_30d": 11268,
+    "added_lines_30d": 110669
   },
   "health": {
-    "staleness_pct": 4.4,
+    "staleness_pct": 3.7,
     "knowledge_topics": 16,
     "active_projects": 9,
     "longest_thread_days": 35,
@@ -26,6 +26,6 @@
   },
   "narrative": {
     "most_recent_topic": ".obsidian",
-    "last_commit_iso": "2026-05-22T11:08:39-05:00"
+    "last_commit_iso": "2026-05-22T14:01:23-05:00"
   }
 }
