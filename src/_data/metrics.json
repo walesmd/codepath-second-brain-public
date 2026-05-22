@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-05-22T02:35:03Z",
-  "days_active": 36,
-  "total_files": 1068,
-  "total_lines": 90612,
-  "total_kb": 6656.1,
+  "generated_at": "2026-05-22T16:08:44Z",
+  "days_active": 37,
+  "total_files": 1072,
+  "total_lines": 91561,
+  "total_kb": 6740.1,
   "input": {
-    "days_active": 36,
-    "total_files": 1068,
-    "total_lines": 90612,
-    "total_kb": 6656.1
+    "days_active": 37,
+    "total_files": 1072,
+    "total_lines": 91561,
+    "total_kb": 6740.1
   },
   "activity": {
-    "streak_days": 2,
+    "streak_days": 3,
     "topics_touched_7d": 8,
-    "edit_ratio_pct_30d": 10.8,
-    "modified_lines_30d": 11147,
-    "added_lines_30d": 92027
+    "edit_ratio_pct_30d": 10.7,
+    "modified_lines_30d": 11160,
+    "added_lines_30d": 92972
   },
   "health": {
     "staleness_pct": 4.4,
@@ -25,7 +25,7 @@
     "longest_thread_file": ".claude-memory/memories.md"
   },
   "narrative": {
-    "most_recent_topic": ".claude-memory",
-    "last_commit_iso": "2026-05-21T21:34:59-05:00"
+    "most_recent_topic": ".obsidian",
+    "last_commit_iso": "2026-05-22T11:08:39-05:00"
   }
 }
