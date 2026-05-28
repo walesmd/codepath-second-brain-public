@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-05-27T18:02:46Z",
-  "days_active": 42,
-  "total_files": 1297,
-  "total_lines": 108033,
-  "total_kb": 7810.4,
+  "generated_at": "2026-05-28T20:08:56Z",
+  "days_active": 43,
+  "total_files": 1311,
+  "total_lines": 109603,
+  "total_kb": 7921.4,
   "input": {
-    "days_active": 42,
-    "total_files": 1297,
-    "total_lines": 108033,
-    "total_kb": 7810.4
+    "days_active": 43,
+    "total_files": 1311,
+    "total_lines": 109603,
+    "total_kb": 7921.4
   },
   "activity": {
-    "streak_days": 1,
-    "topics_touched_7d": 7,
-    "edit_ratio_pct_30d": 9.3,
-    "modified_lines_30d": 11049,
-    "added_lines_30d": 107312
+    "streak_days": 2,
+    "topics_touched_7d": 6,
+    "edit_ratio_pct_30d": 9.2,
+    "modified_lines_30d": 10804,
+    "added_lines_30d": 107154
   },
   "health": {
-    "staleness_pct": 5.9,
-    "knowledge_topics": 16,
-    "active_projects": 9,
-    "longest_thread_days": 40,
+    "staleness_pct": 6.5,
+    "knowledge_topics": 17,
+    "active_projects": 10,
+    "longest_thread_days": 41,
     "longest_thread_file": ".claude-memory/memories.md"
   },
   "narrative": {
     "most_recent_topic": ".claude-memory",
-    "last_commit_iso": "2026-05-27T13:02:42-05:00"
+    "last_commit_iso": "2026-05-28T15:08:52-05:00"
   }
 }
