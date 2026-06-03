@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-06-02T04:12:18Z",
-  "days_active": 47,
-  "total_files": 1620,
-  "total_lines": 127326,
-  "total_kb": 9409.0,
+  "generated_at": "2026-06-03T02:32:54Z",
+  "days_active": 48,
+  "total_files": 1624,
+  "total_lines": 127737,
+  "total_kb": 9442.0,
   "input": {
-    "days_active": 47,
-    "total_files": 1620,
-    "total_lines": 127326,
-    "total_kb": 9409.0
+    "days_active": 48,
+    "total_files": 1624,
+    "total_lines": 127737,
+    "total_kb": 9442.0
   },
   "activity": {
-    "streak_days": 1,
+    "streak_days": 2,
     "topics_touched_7d": 10,
-    "edit_ratio_pct_30d": 7.1,
-    "modified_lines_30d": 8605,
-    "added_lines_30d": 112678
+    "edit_ratio_pct_30d": 6.6,
+    "modified_lines_30d": 7785,
+    "added_lines_30d": 110831
   },
   "health": {
     "staleness_pct": 11.4,
-    "knowledge_topics": 17,
+    "knowledge_topics": 18,
     "active_projects": 11,
-    "longest_thread_days": 44,
-    "longest_thread_file": "ACTION-ITEMS.md"
+    "longest_thread_days": 47,
+    "longest_thread_file": ".claude-memory/topics/codepath-org-structure.md"
   },
   "narrative": {
     "most_recent_topic": ".claude-memory",
-    "last_commit_iso": "2026-06-01T23:12:13-05:00"
+    "last_commit_iso": "2026-06-02T21:32:50-05:00"
   }
 }
